@@ -34,6 +34,8 @@ state_machine:
             get_latest_result: true
         - buildkite-appsuite:
             remove_from_master_comment: true
+        - gh/travis-ci:
+            remove_from_master_comment: true
     hotfix: true
     skip-ci: true
     on_success:
@@ -42,7 +44,8 @@ state_machine:
         QueuedState:
           -
             - buildkite-fullsuite
-            - buildkite-appsuite      
+            - buildkite-appsuite 
+            - gh/travis-ci
     on_failure:
       transition_state: CodeReviewState
 
