@@ -246,3 +246,4 @@ diff_processor:
         func_decorator:
           - task
           - periodic_task
+
